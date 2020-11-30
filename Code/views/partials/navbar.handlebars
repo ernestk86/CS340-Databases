@@ -1,0 +1,26 @@
+<!-- views/partials/navbar.handlebars -->
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="http://web.engr.oregonstate.edu/~johnsna7/index.html">AMATEUR RACE CIRCUIT</a>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item {{#if active.home}}active{{/if}}">
+        <a class="nav-link" href="/">Home</a>
+      </li>
+      <li class="nav-item {{#if active.driver}}active{{/if}}">
+        <a class="nav-link" href="/driver">Driver Info</a>
+      </li>
+      <li class="nav-item {{#if active.race}}active{{/if}}">
+        <a class="nav-link" href="/race">Race Info</a>
+      </li>
+      <li class="nav-item {{#if active.contact}}active{{/if}}">
+        <a class="nav-link" href="/contact">Contact</a>
+      </li>
+    </ul>
+  </div>
+</nav>

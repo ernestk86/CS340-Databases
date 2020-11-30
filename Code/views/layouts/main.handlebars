@@ -1,0 +1,32 @@
+<!-- Used info from: https://javabeat.net/expressjs-bootstrap/ -->
+<!-- 	File Name: main.handlebars
+	Author: Nathan Johnson
+	Date: 08.03.2019 -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="/modules/bootstrap/dist/css/bootstrap.css" media="screen" charset="utf-8">
+    <link rel="stylesheet" href="/static/css/stylesheet.css" type="text/css" media="screen">
+
+    <meta charset="utf-8">
+
+    <title>Team Kimchi Group 22 - Amateur Race Circuit</title>
+</head>
+<body>
+    {{> navbar}}
+    {{{body}}}
+
+    <script src="/modules/jquery/dist/jquery.js" charset="utf-8"></script>
+    <script src="/modules/popper.js/dist/popper.js" charset="utf-8"></script>
+    <script src="/modules/bootstrap/dist/js/bootstrap.js" charset="utf-8"></script>
+    <script src="/static/js/script.js" charset="utf-8"></script>
+    {{#each jsscripts}}
+      <script src="/static/js/{{this}}"></script>
+    {{/each}}
+    <script defer>select(document.getElementById("team_select"), "{{driver.team_id}}");</script>
+    <script defer>select(document.getElementById("vehicle_select"), "{{driver.vehicle_id}}");</script>
+    <script defer>select(document.getElementById("winner_select"), "{{race.winner_id}}");</script>
+    <script defer>select(document.getElementById("track_select"), "{{race.track_id}}");</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<div class="container-fluid">
+  <h1>Edit Vehicle Data</h1>
+
+<div class="container">
+  <h3>Update {{vehicle.vehicle_name}}</h3>
+  <form id="update_vehicle" action="/driver" method="post">
+    <div class="form-group">
+      <label for="new_vehicle_make">Make</label>
+      <input type="text" name="make" class="form-control" id="new_vehicle_make" maxlength="255" value="{{vehicle.vehicle_make}}">
+    </div>
+    <div class="form-group">
+      <label for="new_vehicle_model">Model</label>
+      <input type="text" name="model" class="form-control" id="new_vehicle_model" maxlength="255" value="{{vehicle.vehicle_model}}">
+    </div>
+    <div class="form-group">
+      <label for="new_vehicle_year">Year</label>
+      <input type="number" name="year" class="form-control" id="new_vehicle_year" min="1885" max="2100" value="{{vehicle.vehicle_year}}">
+    </div>
+    <button type="submit" class="btn btn-primary" onclick="updateVehicle({{vehicle.id}})">Submit</button>
+  </form>
+</div>
+</div>
